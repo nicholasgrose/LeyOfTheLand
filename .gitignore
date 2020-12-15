@@ -1,72 +1,25 @@
-# Compiled class file
-*.class
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-#eclipse
-**/bin
-**/.settings
-**/.classpath
-*.project
-
-#In case people make their workspace in the repo
-/eclipse/
-
-#idea
-/.idea
-/classes
+# idea
+out
+*.ipr
+*.iws
 *.iml
+.idea
 
-#gradle
-/build
-/.gradle
-/mdk/.gradle
-/mdk/build
+# gradle
+build
+.gradle
 
-#occupational hazards
-/projects/mcp/
-/projects/clean/
-/projects/forge/
-/projects/**/build/
-/projects/**/out/
-/projects/**/run/
-/projects/**/*.launch
-/repo/
-src/generated/resources/.cache/
+# other
+eclipse
+run
 
-#Patch rejects
-/patches-/
-*.patch.rej
-
-# FML changelog
-changelog.txt
-*.py
-*.7z
-/logs/
-
-gradle.properties
-!/mdk/gradle.properties
-/projects/forge/rejects/
-
-# Srg2Source causes import bugs on these patches. If you intentionnally change these, remove the ignore.
-/patches/minecraft/net/minecraft/client/renderer/ViewFrustum.java.patch
-/patches/minecraft/net/minecraft/data/BlockModelDefinition.java.patch
+# Files from Forge MDK
+forge*changelog.txt
