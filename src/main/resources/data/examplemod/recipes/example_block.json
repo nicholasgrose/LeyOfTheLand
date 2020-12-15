@@ -9,11 +9,7 @@
       "item": "minecraft:dirt"
     },
     "P": {
-      "tag": {
-        "values": [
-          "minecraft:planks"
-        ]
-      }
+      "tag": "minecraft:planks"
     }
   },
   "result": {
