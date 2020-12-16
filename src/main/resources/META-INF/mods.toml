@@ -10,8 +10,7 @@ modId="lotl"
 version="${file.jarVersion}"
 displayName="LeyOfTheLand"
 credits="The Wack Pack"
-authors="Nick 'Arkinion' Rose, Jacob 'Epicjii' Liggett, And Tom 'Pearhair' Yarrow"
-supporters="Special Thanks to Jimmy Tate"
+authors="Nick 'Arkinion' Rose, Jacob 'Epicjii' Liggett, Tom 'Pearhair' Yarrow, And A Special Thanks To Jimmy Tate"
 description='''
 A magic mod that is actually a tech mod.
 '''
