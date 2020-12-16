@@ -6,23 +6,23 @@ loaderVersion="[1.6,)" # Require at least 1.6.x
 license='LGPL'
 
 [[mods]]
-modId="examplemod"
+modId="lotl"
 version="${file.jarVersion}"
-displayName="ExampleMod"
-credits="The ExampleMod dev team"
-authors="ExampleModAuthor"
+displayName="LeyOfTheLand"
+credits="The Wack Pack"
+authors="Nick 'Arkinion' Rose, Jacob 'Epicjii' Liggett, And Tom 'Pearhair' Yarrow"
 description='''
-Example mod that uses Kotlin for Forge.
+A magic mod that is actually a tech mod.
 '''
-[[dependencies.examplemod]]
+[[dependencies.lotl]]
     modId="forge"
     mandatory=true
     versionRange="[31.2,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.examplemod]]
+[[dependencies.lotl]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.16.4]"
     ordering="NONE"
     side="BOTH"

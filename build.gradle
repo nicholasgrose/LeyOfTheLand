@@ -14,8 +14,8 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'kotlin'
 
 version = '1.0.0'
-group = 'example.examplemod'
-archivesBaseName = 'examplemod'
+group = 'mod.lotl'
+archivesBaseName = 'lotl'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -32,7 +32,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                lotl {
                     source sourceSets.main
                 }
             }
@@ -44,7 +44,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                lotl {
                     source sourceSets.main
                 }
             }
@@ -55,10 +55,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources')
+            args '--mod', 'lotl', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources')
 
             mods {
-                examplemod {
+                lotl {
                     source sourceSets.main
                 }
             }
@@ -97,12 +97,12 @@ sourceSets.main.resources {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "examplemod",
-                "Specification-Vendor": "examplemodsareus",
+                "Specification-Title": "lotl",
+                "Specification-Vendor": "lotlsareus",
                 "Specification-Version": "1", // We are version 1 of ourselves
                 "Implementation-Title": project.name,
                 "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"examplemodsareus",
+                "Implementation-Vendor" :"lotlsareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
