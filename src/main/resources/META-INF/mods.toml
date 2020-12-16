@@ -11,7 +11,7 @@ version="${file.jarVersion}"
 displayName="LeyOfTheLand"
 credits="The Wack Pack"
 authors="Nick 'Arkinion' Rose, Jacob 'Epicjii' Liggett, And Tom 'Pearhair' Yarrow"
-Supporters="Special Thanks to Jimmy Tate"
+supporters="Special Thanks to Jimmy Tate"
 description='''
 A magic mod that is actually a tech mod.
 '''
