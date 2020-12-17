@@ -1,19 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PP",
-    "D "
-  ],
-  "key": {
-    "D": {
-      "item": "minecraft:dirt"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PP",
+        "D "
+    ],
+    "key": {
+        "D": {
+            "item": "minecraft:dirt"
+        },
+        "P": {
+            "tag": "minecraft:planks"
+        }
     },
-    "P": {
-      "tag": "minecraft:planks"
+    "result": {
+        "item": "lotl:example_block",
+        "count": 2
     }
-  },
-  "result": {
-    "item": "lotl:example_block",
-    "count": 2
-  }
 }

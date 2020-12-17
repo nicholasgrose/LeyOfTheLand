@@ -1,7 +1,9 @@
 {
-  "variants": {
-    "": [
-      { "model": "lotl:block/example_block" }
-    ]
-  }
+    "variants": {
+        "": [
+            {
+                "model": "lotl:block/example_block"
+            }
+        ]
+    }
 }
