@@ -20,4 +20,7 @@ object ModItems {
     val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
     	BlockItem(ModBlocks.ENLIGHTENED_LOG, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
     }
+    val CRYSTALLIZED_LEY_ORE by REGISTRY.register("crystallized_ley_ore") {
+        BlockItem(ModBlocks.CRYSTALLIZED_LEY_ORE, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+    }
 }

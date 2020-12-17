@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "lotl:block/crystallized_ley_ore" }
+    ]
+  }
+}

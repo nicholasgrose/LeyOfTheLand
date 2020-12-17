@@ -2,6 +2,8 @@ package mod.lotl
 
 import mod.lotl.block.ModBlocks
 import mod.lotl.item.ModItems
+import mod.lotl.oregen.ModOreLoader
+import mod.lotl.oregen.ModOres
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -27,11 +29,12 @@ object LeyOfTheLand {
     val LOGGER: Logger = LogManager.getLogger()
 
     init {
-        LOGGER.log(Level.INFO, "Hello world!")
-
         // Register the KDeferredRegister to the mod-specific event bus
+        FORGE_BUS.register(ModOreLoader)
+
         ModBlocks.REGISTRY.register(MOD_BUS)
         ModItems.REGISTRY.register(MOD_BUS)
+        ModOres.REGISTRY.register(MOD_BUS)
 
         // usage of the KotlinEventBus
         MOD_BUS.addListener(::onClientSetup)
