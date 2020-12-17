@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "lotl:block/enlightened_log_horizontal",
+      "x": 90
+    },
+    "axis=y": {
+      "model": "lotl:block/enlightened_log"
+    },
+    "axis=z": {
+      "model": "lotl:block/enlightened_log_horizontal"
+    }
+  }
+}
