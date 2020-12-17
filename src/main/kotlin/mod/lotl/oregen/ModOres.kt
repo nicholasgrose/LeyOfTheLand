@@ -9,8 +9,7 @@ import net.minecraft.world.gen.GenerationStage
 import net.minecraft.world.gen.feature.ConfiguredFeature
 import net.minecraft.world.gen.feature.Feature
 import net.minecraft.world.gen.feature.OreFeatureConfig
-import net.minecraft.world.gen.placement.ChanceConfig
-import net.minecraft.world.gen.placement.Placement
+import net.minecraft.world.gen.placement.*
 import net.minecraftforge.event.world.BiomeLoadingEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
@@ -23,14 +22,17 @@ object ModOres {
     // use of the new KDeferredRegister
     val REGISTRY = KDeferredRegister(ForgeRegistries.FEATURES, LeyOfTheLand.ID)
 
-    val CRYSTALLIZED_LEY_ORE: ConfiguredFeature<OreFeatureConfig, *> by lazy {
+    val CRYSTALLIZED_LEY_ORE by lazy {
         Feature.ORE
             .withConfiguration(
                 OreFeatureConfig(
                     OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
                     ModBlocks.CRYSTALLIZED_LEY_ORE.defaultState,
-                    100
+                    4
                 )
+            )
+            .withPlacement(
+                ConfiguredPlacement(Placement.DEPTH_AVERAGE, DepthAverageConfig(8, 5))
             )
     }
 }
