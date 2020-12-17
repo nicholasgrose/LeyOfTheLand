@@ -3,8 +3,9 @@ package mod.lotl.block
 import mod.lotl.LeyOfTheLand
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
-import net.minecraft.block.BlockState
+import net.minecraft.block.WoodType
 import net.minecraft.block.material.Material
+import net.minecraft.block.material.MaterialColor
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
 
@@ -18,8 +19,9 @@ object ModBlocks {
         Block(AbstractBlock.Properties.create(Material.BAMBOO).setLightLevel { 15 }.hardnessAndResistance(3.0f))
     }
     val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
-        val enlightened_log = Block(AbstractBlock.Properties.create(Material.WOOD).setLightLevel { 9 }.hardnessAndResistance(2.0f))
-        return@register enlightened_log
+        val magic = Material.Builder(MaterialColor.WOOD).build()
+        val enlightenedLog = LeyBlock(AbstractBlock.Properties.create(magic).setLightLevel { 9 }.hardnessAndResistance(2.0f))
+        return@register enlightenedLog
     }
     val CRYSTALLIZED_LEY_ORE by REGISTRY.register("crystallized_ley_ore") {
         Block(AbstractBlock.Properties.create(Material.ROCK).setLightLevel { 7 })
