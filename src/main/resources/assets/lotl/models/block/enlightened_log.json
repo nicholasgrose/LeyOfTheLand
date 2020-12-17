@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cube_column_horizontal",
+  "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "lotl:block/example_block",
     "side": "lotl:block/crystallized_ley_ore"
