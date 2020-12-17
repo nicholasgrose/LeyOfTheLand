@@ -17,4 +17,7 @@ object ModItems {
     val EXAMPLE_BLOCK by REGISTRY.register("example_block") {
         BlockItem(ModBlocks.EXAMPLE_BLOCK, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
     }
+    val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
+    	BlockItem(ModBlocks.ENLIGHTENED_LOG, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+    }
 }

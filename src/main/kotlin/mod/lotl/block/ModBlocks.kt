@@ -16,4 +16,8 @@ object ModBlocks {
     val EXAMPLE_BLOCK by REGISTRY.register("example_block") {
         Block(AbstractBlock.Properties.create(Material.BAMBOO).setLightLevel { 15 }.hardnessAndResistance(3.0f))
     }
+    val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
+        val enlightened_log = Block(AbstractBlock.Properties.create(Material.WOOD).setLightLevel { 9 }.hardnessAndResistance(2.0f))
+        return@register enlightened_log
+    }
 }
