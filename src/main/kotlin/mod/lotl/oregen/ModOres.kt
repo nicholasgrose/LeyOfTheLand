@@ -22,7 +22,7 @@ object ModOres {
     // use of the new KDeferredRegister
     val REGISTRY = KDeferredRegister(ForgeRegistries.FEATURES, LeyOfTheLand.ID)
 
-    val CRYSTALLIZED_LEY_ORE by lazy {
+    val CRYSTALLIZED_LEY_ORE: ConfiguredFeature<*, *> by lazy {
         Feature.ORE
             .withConfiguration(
                 OreFeatureConfig(

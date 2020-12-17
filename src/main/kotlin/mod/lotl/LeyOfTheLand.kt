@@ -26,7 +26,7 @@ object LeyOfTheLand {
     const val ID: String = "lotl"
 
     // the logger for our mod
-    val LOGGER: Logger = LogManager.getLogger()
+    private val LOGGER: Logger = LogManager.getLogger()
 
     init {
         // Register the KDeferredRegister to the mod-specific event bus
