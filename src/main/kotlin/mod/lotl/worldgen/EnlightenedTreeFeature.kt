@@ -14,9 +14,14 @@ class EnlightenedTreeFeature {
                 BaseTreeFeatureConfig.Builder(
                     SimpleBlockStateProvider(ModBlocks.ENLIGHTENED_LOG.defaultState),
                     SimpleBlockStateProvider(ModBlocks.ENLIGHTENED_LEAVES.defaultState),
+                    // For FoliagePlacer, the first argument is radius, second is radius_random, third is offset,
+                    // fourth is offset_random. And if you are using BlobFoliagePlacer, the fifth argument is height
                     FancyFoliagePlacer(FeatureSpread.func_242252_a(3), FeatureSpread.func_242252_a(3), 3),
+                    // For TrunkPlacer, the first argument is the base height,
+                    // second is height_rand_a, and third is height_rand_b
                     FancyTrunkPlacer(4, 4, 5),
-                    // Affects how far apart the trees spawn. The second parameter seems to have a significant effect on things.
+                    // Affects where the trees spawn.
+                    // The second parameter seems to have a significant effect on distance between trees
                     TwoLayerFeature(10, 50, 10)
                 ).build()
             )
