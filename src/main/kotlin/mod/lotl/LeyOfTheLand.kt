@@ -4,6 +4,7 @@ import mod.lotl.block.ModBlocks
 import mod.lotl.item.ModItems
 import mod.lotl.oregen.OreGeneration
 import mod.lotl.oregen.ModOres
+import mod.lotl.worldgen.WorldGeneration
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -31,6 +32,7 @@ object LeyOfTheLand {
     init {
         // Register the KDeferredRegister to the mod-specific event bus
         OreGeneration.registerOreGeneration(FORGE_BUS)
+        WorldGeneration.registerWorldGeneration(FORGE_BUS)
 
         ModBlocks.REGISTRY.register(MOD_BUS)
         ModItems.REGISTRY.register(MOD_BUS)
