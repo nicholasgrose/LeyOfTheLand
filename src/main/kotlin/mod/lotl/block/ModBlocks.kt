@@ -30,7 +30,7 @@ object ModBlocks {
     }
     val ENLIGHTENED_LEAVES by REGISTRY.register("enlightened_leaves") {
         LeavesBlock(
-            AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT)
+            AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT).notSolid()
         )
     }
 }
