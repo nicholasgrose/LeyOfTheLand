@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "lotl:block/enlightened_leaves"
+            }
+        ]
+    }
+}
