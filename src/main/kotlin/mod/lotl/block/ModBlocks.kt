@@ -1,11 +1,10 @@
 package mod.lotl.block
 
 import mod.lotl.LeyOfTheLand
-import net.minecraft.block.AbstractBlock
-import net.minecraft.block.Block
-import net.minecraft.block.SoundType
+import net.minecraft.block.*
 import net.minecraft.block.material.Material
 import net.minecraft.block.material.MaterialColor
+import net.minecraft.state.properties.BlockStateProperties
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
 
@@ -28,5 +27,10 @@ object ModBlocks {
 
     val CRYSTALLIZED_LEY_ORE by REGISTRY.register("crystallized_ley_ore") {
         Block(AbstractBlock.Properties.create(Material.ROCK).setLightLevel { 7 })
+    }
+    val ENLIGHTENED_LEAVES by REGISTRY.register("enlightened_leaves") {
+        LeavesBlock(
+            AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT)
+        )
     }
 }
