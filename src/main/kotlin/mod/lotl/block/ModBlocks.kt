@@ -3,6 +3,7 @@ package mod.lotl.block
 import mod.lotl.LeyOfTheLand
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
+import net.minecraft.block.SoundType
 import net.minecraft.block.material.Material
 import net.minecraft.block.material.MaterialColor
 import net.minecraftforge.registries.ForgeRegistries
@@ -20,7 +21,9 @@ object ModBlocks {
 
     val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
         val magic = Material.Builder(MaterialColor.WOOD).build()
-        ColumnBlock(AbstractBlock.Properties.create(magic).setLightLevel { 9 }.hardnessAndResistance(2.0f))
+        ColumnBlock(
+            AbstractBlock.Properties.create(magic).setLightLevel { 9 }.hardnessAndResistance(2.0f).sound(SoundType.WOOD)
+        )
     }
 
     val CRYSTALLIZED_LEY_ORE by REGISTRY.register("crystallized_ley_ore") {
