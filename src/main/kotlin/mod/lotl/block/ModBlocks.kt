@@ -4,6 +4,8 @@ import mod.lotl.LeyOfTheLand
 import net.minecraft.block.*
 import net.minecraft.block.material.Material
 import net.minecraft.block.material.MaterialColor
+import net.minecraft.util.math.BlockPos
+import net.minecraft.world.IBlockReader
 import net.minecraftforge.common.ToolType
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
@@ -26,11 +28,16 @@ object ModBlocks {
     }
 
     val CRYSTALLIZED_LEY_ORE by REGISTRY.register("crystallized_ley_ore") {
-        Block(AbstractBlock.Properties.create(Material.ROCK).setLightLevel { 7 }.hardnessAndResistance(3.0f).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2))
+        Block(
+            AbstractBlock.Properties.create(Material.ROCK).setLightLevel { 7 }.hardnessAndResistance(3.0f)
+                .setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2)
+        )
     }
     val ENLIGHTENED_LEAVES by REGISTRY.register("enlightened_leaves") {
         LeavesBlock(
-            AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT).hardnessAndResistance((.2f)).notSolid().setSuffocates { p_test_1_, p_test_2_, p_test_3_ -> false }
+            AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT)
+                .hardnessAndResistance((.2f)).notSolid().setSuffocates { _: BlockState, _: IBlockReader, _: BlockPos -> false }
+                .setBlocksVision { _: BlockState, _: IBlockReader, _: BlockPos -> false }
         )
     }
 }
