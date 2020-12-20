@@ -1,4 +1,4 @@
-package mod.lotl.oregen
+package mod.lotl.common.oregen
 
 import net.minecraft.world.biome.Biome
 import net.minecraft.world.gen.GenerationStage

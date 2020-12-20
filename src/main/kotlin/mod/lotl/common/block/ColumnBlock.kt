@@ -1,4 +1,4 @@
-package mod.lotl.block
+package mod.lotl.common.block
 
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState

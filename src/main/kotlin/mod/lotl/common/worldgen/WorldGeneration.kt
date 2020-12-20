@@ -1,4 +1,4 @@
-package mod.lotl.worldgen
+package mod.lotl.common.worldgen
 
 import net.minecraft.world.biome.Biome
 import net.minecraft.world.gen.GenerationStage

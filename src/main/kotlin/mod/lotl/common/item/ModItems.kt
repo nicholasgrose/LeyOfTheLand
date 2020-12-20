@@ -1,7 +1,7 @@
-package mod.lotl.item
+package mod.lotl.common.item
 
 import mod.lotl.LeyOfTheLand
-import mod.lotl.block.ModBlocks
+import mod.lotl.common.block.ModBlocks
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
@@ -14,15 +14,18 @@ object ModItems {
 
     // the returned ObjectHolderDelegate can be used as a property delegate
     // this is automatically registered by the deferred registry at the correct times
-    val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
+    @Suppress("unused")
+    val ENLIGHTENED_LOG by REGISTRY.registerObject("enlightened_log") {
         BlockItem(ModBlocks.ENLIGHTENED_LOG, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
     }
 
-    val  ENLIGHTENED_LEAVES by REGISTRY.register("enlightened_leaves") {
+    @Suppress("unused")
+    val  ENLIGHTENED_LEAVES by REGISTRY.registerObject("enlightened_leaves") {
         BlockItem(ModBlocks.ENLIGHTENED_LEAVES, Item.Properties().group(ItemGroup.DECORATIONS))
     }
 
-    val CRYSTALLIZED_LEY_ORE by REGISTRY.register("crystallized_ley_ore") {
+    @Suppress("unused")
+    val CRYSTALLIZED_LEY_ORE by REGISTRY.registerObject("crystallized_ley_ore") {
         BlockItem(ModBlocks.CRYSTALLIZED_LEY_ORE, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
     }
 }

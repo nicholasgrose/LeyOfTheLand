@@ -1,9 +1,7 @@
-package mod.lotl.oregen
+package mod.lotl.common.oregen
 
 import mod.lotl.LeyOfTheLand
-import mod.lotl.block.ModBlocks
-import net.minecraft.util.registry.Registry
-import net.minecraft.util.registry.WorldGenRegistries
+import mod.lotl.common.block.ModBlocks
 import net.minecraft.world.biome.Biome
 import net.minecraft.world.gen.GenerationStage
 import net.minecraft.world.gen.feature.ConfiguredFeature
@@ -12,11 +10,8 @@ import net.minecraft.world.gen.feature.OreFeatureConfig
 import net.minecraft.world.gen.placement.*
 import net.minecraftforge.event.world.BiomeLoadingEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.registries.ForgeRegistries
-import thedarkcolour.kotlinforforge.forge.FORGE_BUS
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
-import thedarkcolour.kotlinforforge.forge.MOD_BUS
 
 object ModOres {
     // use of the new KDeferredRegister

@@ -1,6 +1,6 @@
-package mod.lotl.worldgen
+package mod.lotl.common.worldgen
 
-import mod.lotl.block.ModBlocks
+import mod.lotl.common.block.ModBlocks
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider
 import net.minecraft.world.gen.feature.*
 import net.minecraft.world.gen.foliageplacer.FancyFoliagePlacer

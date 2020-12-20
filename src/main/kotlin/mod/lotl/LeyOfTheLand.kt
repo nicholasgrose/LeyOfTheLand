@@ -1,10 +1,10 @@
 package mod.lotl
 
-import mod.lotl.block.ModBlocks
-import mod.lotl.item.ModItems
-import mod.lotl.oregen.OreGeneration
-import mod.lotl.oregen.ModOres
-import mod.lotl.worldgen.WorldGeneration
+import mod.lotl.common.block.ModBlocks
+import mod.lotl.common.item.ModItems
+import mod.lotl.common.oregen.OreGeneration
+import mod.lotl.common.oregen.ModOres
+import mod.lotl.common.worldgen.WorldGeneration
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -48,14 +48,14 @@ object LeyOfTheLand {
      * things such as renderers and keymaps
      * Fired on the mod specific event bus.
      */
-    private fun onClientSetup(event: FMLClientSetupEvent) {
+    private fun onClientSetup(@Suppress("UNUSED_PARAMETER") event: FMLClientSetupEvent) {
         LOGGER.log(Level.INFO, "Initializing client...")
     }
 
     /**
      * Fired on the global Forge bus.
      */
-    private fun onServerAboutToStart(event: FMLServerAboutToStartEvent) {
+    private fun onServerAboutToStart(@Suppress("UNUSED_PARAMETER") event: FMLServerAboutToStartEvent) {
         LOGGER.log(Level.INFO, "Server starting...")
     }
 }
