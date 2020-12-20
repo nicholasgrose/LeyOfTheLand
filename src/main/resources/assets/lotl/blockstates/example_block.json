@@ -1,9 +1,0 @@
-{
-    "variants": {
-        "": [
-            {
-                "model": "lotl:block/example_block"
-            }
-        ]
-    }
-}

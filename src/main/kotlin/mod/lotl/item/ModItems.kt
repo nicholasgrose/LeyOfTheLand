@@ -14,13 +14,10 @@ object ModItems {
 
     // the returned ObjectHolderDelegate can be used as a property delegate
     // this is automatically registered by the deferred registry at the correct times
-    val EXAMPLE_BLOCK by REGISTRY.register("example_block") {
-        BlockItem(ModBlocks.EXAMPLE_BLOCK, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
-    }
-
     val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
         BlockItem(ModBlocks.ENLIGHTENED_LOG, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
     }
+
     val  ENLIGHTENED_LEAVES by REGISTRY.register("enlightened_leaves") {
         BlockItem(ModBlocks.ENLIGHTENED_LEAVES, Item.Properties().group(ItemGroup.DECORATIONS))
     }

@@ -16,10 +16,6 @@ object ModBlocks {
 
     // the returned ObjectHolderDelegate can be used as a property delegate
     // this is automatically registered by the deferred registry at the correct times
-    val EXAMPLE_BLOCK by REGISTRY.register("example_block") {
-        Block(AbstractBlock.Properties.create(Material.BAMBOO).setLightLevel { 15 }.hardnessAndResistance(3.0f))
-    }
-
     val ENLIGHTENED_LOG by REGISTRY.register("enlightened_log") {
         val magic = Material.Builder(MaterialColor.WOOD).build()
         ColumnBlock(
@@ -33,6 +29,7 @@ object ModBlocks {
                 .setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2)
         )
     }
+
     val ENLIGHTENED_LEAVES by REGISTRY.register("enlightened_leaves") {
         LeavesBlock(
             AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT)
