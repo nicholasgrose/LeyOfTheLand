@@ -59,3 +59,11 @@ object LeyOfTheLand {
         LOGGER.log(Level.INFO, "Server starting...")
     }
 }
+
+/*
+                             X
+             X
+                     X
+                               X
+            X               X
+ */

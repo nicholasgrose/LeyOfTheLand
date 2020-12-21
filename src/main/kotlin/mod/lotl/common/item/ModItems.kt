@@ -29,6 +29,7 @@ object ModItems {
     val CRYSTALLIZED_LEY_ORE by REGISTRY.registerObject("crystallized_ley_ore") {
         BlockItem(ModBlocks.CRYSTALLIZED_LEY_ORE, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
     }
+
     @Suppress("unused")
     val CRYSTAL_LEY by REGISTRY.registerObject("crystal_ley") {
         Item(Item.Properties().group(ItemGroup.MATERIALS))
