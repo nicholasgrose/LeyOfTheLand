@@ -7,6 +7,7 @@ import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
+import java.util.*
 
 object ModItems {
     // use of the new KDeferredRegister
@@ -27,5 +28,9 @@ object ModItems {
     @Suppress("unused")
     val CRYSTALLIZED_LEY_ORE by REGISTRY.registerObject("crystallized_ley_ore") {
         BlockItem(ModBlocks.CRYSTALLIZED_LEY_ORE, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+    }
+    @Suppress("unused")
+    val CRYSTAL_LEY by REGISTRY.registerObject("crystal_ley") {
+        Item(Item.Properties().group(ItemGroup.MATERIALS))
     }
 }
