@@ -31,13 +31,3 @@ object ModOres {
             )
     }
 }
-
-object ModOreLoader {
-    @SubscribeEvent
-    fun onBiomeLoading(event: BiomeLoadingEvent) {
-        if (event.category == Biome.Category.NETHER || event.category == Biome.Category.THEEND) return
-
-        event.generation.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES)
-            .add { ModOres.CRYSTALLIZED_LEY_ORE }
-    }
-}
