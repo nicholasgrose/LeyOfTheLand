@@ -5,6 +5,7 @@ import mod.lotl.common.item.ModItems
 import mod.lotl.common.oregen.OreGeneration
 import mod.lotl.common.oregen.ModOres
 import mod.lotl.common.worldgen.WorldGeneration
+import mod.lotl.common.worldgen.biome.ModBiomes
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -37,6 +38,7 @@ object LeyOfTheLand {
         ModBlocks.REGISTRY.register(MOD_BUS)
         ModItems.REGISTRY.register(MOD_BUS)
         ModOres.REGISTRY.register(MOD_BUS)
+        ModBiomes.REGISTRY.register(MOD_BUS)
 
         // usage of the KotlinEventBus
         MOD_BUS.addListener(::onClientSetup)
@@ -59,11 +61,3 @@ object LeyOfTheLand {
         LOGGER.log(Level.INFO, "Server starting...")
     }
 }
-
-/*
-                             X
-             X
-                     X
-                               X
-            X               X
- */
