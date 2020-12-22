@@ -1,7 +1,6 @@
 {
   "replace": false,
-  "values": [
-    "lotl:enlightened_log",
+  "values":[
     "lotl:enlightened_planks"
   ]
 }

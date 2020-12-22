@@ -34,4 +34,8 @@ object ModItems {
     val CRYSTAL_LEY by REGISTRY.registerObject("crystal_ley") {
         Item(Item.Properties().group(ItemGroup.MATERIALS))
     }
+    @Suppress("unused")
+    val ENLIGHTENED_PLANKS by REGISTRY.registerObject("enlightened_planks") {
+        BlockItem(ModBlocks.ENLIGHTENED_PLANKS, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+    }
 }

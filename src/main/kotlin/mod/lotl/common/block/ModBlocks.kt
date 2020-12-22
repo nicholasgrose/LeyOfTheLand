@@ -20,12 +20,13 @@ object ModBlocks {
         val magic = Material.Builder(MaterialColor.WOOD).build()
         ColumnBlock(
             AbstractBlock.Properties.create(magic).setLightLevel { 9 }.hardnessAndResistance(2.0f).sound(SoundType.WOOD)
+                .harvestTool(ToolType.AXE)
         )
     }
 
     val CRYSTALLIZED_LEY_ORE by REGISTRY.registerObject("crystallized_ley_ore") {
         Block(
-            AbstractBlock.Properties.create(Material.ROCK).setLightLevel { 7 }.hardnessAndResistance(3.0f)
+            AbstractBlock.Properties.create(Material.ROCK).setLightLevel { 9 }.hardnessAndResistance(3.0f)
                 .setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2)
         )
     }
@@ -34,7 +35,13 @@ object ModBlocks {
         LeavesBlock(
             AbstractBlock.Properties.create(Material.LEAVES).setLightLevel { 9 }.sound(SoundType.PLANT)
                 .hardnessAndResistance((.2f)).notSolid().setSuffocates { _: BlockState, _: IBlockReader, _: BlockPos -> false }
-                .setBlocksVision { _: BlockState, _: IBlockReader, _: BlockPos -> false }
+                .setBlocksVision { _: BlockState, _: IBlockReader, _: BlockPos -> false }.harvestTool(ToolType.HOE)
+        )
+    }
+    val ENLIGHTENED_PLANKS by REGISTRY.registerObject("enlightened_planks") {
+        Block(
+            AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(3.0f)
+                .harvestTool(ToolType.AXE).sound(SoundType.WOOD)
         )
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "lotl:enlightened_log"
+    }
+  ],
+  "result": {
+    "item": "lotl:enlightened_planks",
+    "count": 4
+  }
+}
