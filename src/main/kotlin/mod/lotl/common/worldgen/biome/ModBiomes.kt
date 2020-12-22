@@ -47,12 +47,12 @@ object ModBiomes {
                     .setMusic(BackgroundMusicTracks.WORLD_MUSIC)
                     .setWaterColor(0x990099)
                     .setWaterFogColor(0x990099)
-                    .withFoliageColor(0x990099)
-                    .withGrassColor(0x990099)
+                    .withFoliageColor(0xd4af37)
+                    .withGrassColor(0xd4af37)
                     .withSkyColor(0x990099)
                     .build()
             )
             .build()
-        biome
+        return@registerObject biome
     }
 }
