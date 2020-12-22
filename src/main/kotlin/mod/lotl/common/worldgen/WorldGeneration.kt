@@ -14,8 +14,5 @@ object WorldGeneration {
     @SubscribeEvent
     fun onBiomeLoading(event: BiomeLoadingEvent) {
         if (event.category == Biome.Category.NETHER || event.category == Biome.Category.THEEND) return
-
-        event.generation.getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION)
-            .add { EnlightenedTreeFeature.configuredFeature }
     }
 }

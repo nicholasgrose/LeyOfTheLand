@@ -2,10 +2,16 @@ package mod.lotl
 
 import mod.lotl.common.block.ModBlocks
 import mod.lotl.common.item.ModItems
-import mod.lotl.common.oregen.OreGeneration
 import mod.lotl.common.oregen.ModOres
+import mod.lotl.common.oregen.OreGeneration
 import mod.lotl.common.worldgen.WorldGeneration
 import mod.lotl.common.worldgen.biome.ModBiomes
+import net.minecraft.util.RegistryKey
+import net.minecraft.util.ResourceLocation
+import net.minecraft.util.registry.Registry
+import net.minecraft.world.biome.Biomes
+import net.minecraftforge.common.BiomeDictionary
+import net.minecraftforge.common.BiomeManager
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -39,6 +45,9 @@ object LeyOfTheLand {
         ModItems.REGISTRY.register(MOD_BUS)
         ModOres.REGISTRY.register(MOD_BUS)
         ModBiomes.REGISTRY.register(MOD_BUS)
+        val key = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, ResourceLocation("lotl:ley_biome"))
+        BiomeDictionary.addTypes(key, BiomeDictionary.Type.FOREST)
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, BiomeManager.BiomeEntry(key, 10))
 
         // usage of the KotlinEventBus
         MOD_BUS.addListener(::onClientSetup)

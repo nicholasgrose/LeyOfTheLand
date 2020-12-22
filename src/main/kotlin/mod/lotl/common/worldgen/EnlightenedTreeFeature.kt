@@ -21,7 +21,7 @@ object EnlightenedTreeFeature {
                 FancyTrunkPlacer(4, 4, 5),
                 // Affects where the trees spawn.
                 // The second parameter seems to have a significant effect on distance between trees
-                TwoLayerFeature(10, 50, 10)
+                TwoLayerFeature(9, 5, 11)
             ).build()
         )
     }
