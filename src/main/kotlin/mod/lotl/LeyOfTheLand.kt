@@ -47,7 +47,7 @@ object LeyOfTheLand {
         ModBiomes.REGISTRY.register(MOD_BUS)
         val key = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, ResourceLocation("lotl:ley_biome"))
         BiomeDictionary.addTypes(key, BiomeDictionary.Type.FOREST)
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, BiomeManager.BiomeEntry(key, 10))
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, BiomeManager.BiomeEntry(key, 1))
 
         // usage of the KotlinEventBus
         MOD_BUS.addListener(::onClientSetup)
