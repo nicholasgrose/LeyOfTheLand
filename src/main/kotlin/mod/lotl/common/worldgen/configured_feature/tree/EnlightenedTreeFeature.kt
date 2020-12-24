@@ -1,4 +1,4 @@
-package mod.lotl.common.worldgen
+package mod.lotl.common.worldgen.configured_feature.tree
 
 import mod.lotl.common.block.ModBlocks
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider

@@ -1,23 +1,15 @@
-package mod.lotl.common.oregen
+package mod.lotl.common.worldgen.configured_feature.ore
 
-import mod.lotl.LeyOfTheLand
 import mod.lotl.common.block.ModBlocks
-import net.minecraft.world.biome.Biome
-import net.minecraft.world.gen.GenerationStage
 import net.minecraft.world.gen.feature.ConfiguredFeature
 import net.minecraft.world.gen.feature.Feature
 import net.minecraft.world.gen.feature.OreFeatureConfig
-import net.minecraft.world.gen.placement.*
-import net.minecraftforge.event.world.BiomeLoadingEvent
-import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.registries.ForgeRegistries
-import thedarkcolour.kotlinforforge.forge.KDeferredRegister
+import net.minecraft.world.gen.placement.ConfiguredPlacement
+import net.minecraft.world.gen.placement.DepthAverageConfig
+import net.minecraft.world.gen.placement.Placement
 
-object ModOres {
-    // use of the new KDeferredRegister
-    val REGISTRY = KDeferredRegister(ForgeRegistries.FEATURES, LeyOfTheLand.ID)
-
-    val CRYSTALLIZED_LEY_ORE: ConfiguredFeature<*, *> by lazy {
+object CrystallizedLeyOreFeature {
+    val configuredFeature: ConfiguredFeature<*, *> by lazy {
         Feature.ORE
             .withConfiguration(
                 OreFeatureConfig(

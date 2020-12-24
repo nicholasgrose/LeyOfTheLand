@@ -1,17 +1,6 @@
 package mod.lotl
 
-import mod.lotl.common.block.ModBlocks
-import mod.lotl.common.item.ModItems
-import mod.lotl.common.oregen.ModOres
-import mod.lotl.common.oregen.OreGeneration
-import mod.lotl.common.worldgen.WorldGeneration
-import mod.lotl.common.worldgen.biome.ModBiomes
-import net.minecraft.util.RegistryKey
-import net.minecraft.util.ResourceLocation
-import net.minecraft.util.registry.Registry
-import net.minecraft.world.biome.Biomes
-import net.minecraftforge.common.BiomeDictionary
-import net.minecraftforge.common.BiomeManager
+import mod.lotl.common.CommonRegistrationManager
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
 import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent
@@ -38,16 +27,7 @@ object LeyOfTheLand {
 
     init {
         // Register the KDeferredRegister to the mod-specific event bus
-        OreGeneration.registerOreGeneration(FORGE_BUS)
-        WorldGeneration.registerWorldGeneration(FORGE_BUS)
-
-        ModBlocks.REGISTRY.register(MOD_BUS)
-        ModItems.REGISTRY.register(MOD_BUS)
-        ModOres.REGISTRY.register(MOD_BUS)
-        ModBiomes.REGISTRY.register(MOD_BUS)
-        val key = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, ResourceLocation("lotl:ley_biome"))
-        BiomeDictionary.addTypes(key, BiomeDictionary.Type.FOREST)
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, BiomeManager.BiomeEntry(key, 1))
+        CommonRegistrationManager.registerCommonObjects()
 
         // usage of the KotlinEventBus
         MOD_BUS.addListener(::onClientSetup)

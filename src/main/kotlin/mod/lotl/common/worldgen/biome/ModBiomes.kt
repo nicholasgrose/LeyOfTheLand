@@ -1,21 +1,16 @@
 package mod.lotl.common.worldgen.biome
 
 import mod.lotl.LeyOfTheLand
-import mod.lotl.common.oregen.ModOres
-import mod.lotl.common.worldgen.EnlightenedTreeFeature
+import mod.lotl.common.worldgen.configured_feature.tree.EnlightenedTreeFeature
 import net.minecraft.block.Blocks
 import net.minecraft.client.audio.BackgroundMusicTracks
-import net.minecraft.particles.ParticleTypes
-import net.minecraft.util.SoundEvents
 import net.minecraft.world.biome.*
 import net.minecraft.world.gen.GenerationStage
 import net.minecraft.world.gen.carver.ConfiguredCarver
-import net.minecraft.world.gen.carver.ICarverConfig
 import net.minecraft.world.gen.carver.WorldCarver
 import net.minecraft.world.gen.feature.Features
 import net.minecraft.world.gen.feature.ProbabilityConfig
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder
@@ -25,12 +20,16 @@ import thedarkcolour.kotlinforforge.forge.KDeferredRegister
 object ModBiomes {
     val REGISTRY = KDeferredRegister(ForgeRegistries.BIOMES, LeyOfTheLand.ID)
 
-    val LEY_BIOME by REGISTRY.registerObject("ley_biome") {
+    val LEY_BIOME: Biome by REGISTRY.registerObject("ley_biome") {
         val generationSettingsBuilder = BiomeGenerationSettingsBuilder(BiomeGenerationSettings.DEFAULT_SETTINGS)
             .withSurfaceBuilder {
                 ConfiguredSurfaceBuilder(
                     SurfaceBuilder.DEFAULT,
-                    SurfaceBuilderConfig(Blocks.GRASS_BLOCK.defaultState, Blocks.STONE.defaultState, Blocks.DIRT.defaultState)
+                    SurfaceBuilderConfig(
+                        Blocks.GRASS_BLOCK.defaultState,
+                        Blocks.STONE.defaultState,
+                        Blocks.DIRT.defaultState
+                    )
                 )
             }
             .withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, EnlightenedTreeFeature.configuredFeature)
@@ -53,7 +52,7 @@ object ModBiomes {
             .withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Features.ORE_IRON)
             .withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Features.ORE_LAPIS)
             .withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Features.ORE_REDSTONE)
-        val biome = Biome.Builder()
+        return@registerObject Biome.Builder()
             .downfall(0.5f)
             .temperature(0.5f)
             .precipitation(Biome.RainType.RAIN)
@@ -76,6 +75,5 @@ object ModBiomes {
                     .build()
             )
             .build()
-        return@registerObject biome
     }
 }
