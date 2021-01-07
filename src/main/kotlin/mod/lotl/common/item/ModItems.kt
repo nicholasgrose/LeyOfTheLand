@@ -2,9 +2,7 @@ package mod.lotl.common.item
 
 import mod.lotl.LeyOfTheLand
 import mod.lotl.common.block.ModBlocks
-import net.minecraft.item.BlockItem
-import net.minecraft.item.Item
-import net.minecraft.item.ItemGroup
+import net.minecraft.item.*
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
 import java.util.*
@@ -37,5 +35,9 @@ object ModItems {
     @Suppress("unused")
     val ENLIGHTENED_PLANKS by REGISTRY.registerObject("enlightened_planks") {
         BlockItem(ModBlocks.ENLIGHTENED_PLANKS, Item.Properties().group(ItemGroup.BUILDING_BLOCKS))
+    }
+
+    val LEY_FINDER by REGISTRY.registerObject("ley_finder") {
+        Item(Item.Properties().isImmuneToFire.maxStackSize(1).group(ItemGroup.TOOLS))
     }
 }
