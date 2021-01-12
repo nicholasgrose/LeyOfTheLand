@@ -5,7 +5,6 @@ import mod.lotl.common.block.ModBlocks
 import net.minecraft.item.*
 import net.minecraftforge.registries.ForgeRegistries
 import thedarkcolour.kotlinforforge.forge.KDeferredRegister
-import java.util.*
 
 object ModItems {
     // use of the new KDeferredRegister
