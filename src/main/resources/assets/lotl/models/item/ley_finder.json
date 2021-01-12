@@ -1,24 +1,56 @@
 {
-  "parent": "item/handheld_rod",
-  "display": {
-    "thirdperson_righthand" : {
-      "rotation": [0, 0, 0],
-      "scale": [1,1,0.5]
+    "parent": "item/handheld_rod",
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                0.5
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                0.5
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                0.5
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                0.5
+            ]
+        }
     },
-    "thirdperson_lefthand" : {
-      "rotation": [0, 0, 0],
-      "scale": [1,1,0.5]
-    },
-    "firstperson_lefthand" : {
-      "rotation": [0, 0, 0],
-      "scale": [1,1,0.5]
-    },
-    "firstperson_righthand" : {
-      "rotation": [0, 0, 0],
-      "scale": [1,1,0.5]
+    "textures": {
+        "layer0": "lotl:item/ley_finder_2.0"
     }
-  },
-  "textures": {
-    "layer0": "lotl:item/ley_finder_2.0"
-  }
 }
