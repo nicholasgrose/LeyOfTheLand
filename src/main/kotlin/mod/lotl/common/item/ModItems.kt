@@ -37,6 +37,6 @@ object ModItems {
     }
 
     val LEY_FINDER by REGISTRY.registerObject("ley_finder") {
-        Item(Item.Properties().isImmuneToFire.maxStackSize(1).group(ItemGroup.TOOLS))
+        LeyFinder()
     }
 }
