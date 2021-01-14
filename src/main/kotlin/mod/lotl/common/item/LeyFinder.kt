@@ -13,7 +13,6 @@ import net.minecraft.util.Hand
 import net.minecraft.world.World
 import net.minecraft.world.biome.Biome
 import net.minecraft.world.server.ServerWorld
-import java.util.function.Predicate
 
 
 class LeyFinder : Item(Properties().isImmuneToFire.maxStackSize(1).group(ItemGroup.TOOLS)) {
