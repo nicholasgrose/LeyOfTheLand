@@ -1,7 +1,7 @@
 package mod.lotl.common.item
 
+import mod.lotl.common.worldgen.biome.ModBiomes.LEY_BIOME
 import net.minecraft.advancements.CriteriaTriggers
-import net.minecraft.entity.item.EnderPearlEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.ServerPlayerEntity
 import net.minecraft.entity.projectile.EyeOfEnderEntity
@@ -10,22 +10,31 @@ import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
-import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
+import net.minecraft.world.biome.Biome
+import net.minecraft.world.server.ServerWorld
+import java.util.function.Predicate
+
 
 class LeyFinder : Item(Properties().isImmuneToFire.maxStackSize(1).group(ItemGroup.TOOLS)) {
     override fun onItemRightClick(worldIn: World, playerIn: PlayerEntity, handIn: Hand): ActionResult<ItemStack> {
         val itemstack = playerIn.getHeldItem(handIn)
-        val blockpos = BlockPos(0, 100, 0)
-        if (blockpos != null) {
-            val eyeofenderentity = EyeOfEnderEntity(worldIn, playerIn.posX, playerIn.getPosYHeight(0.5), playerIn.posZ)
-            eyeofenderentity.func_213863_b(itemstack)
-            eyeofenderentity.moveTowards(blockpos)
-            worldIn.addEntity(eyeofenderentity)
-            if (playerIn is ServerPlayerEntity) {
-                CriteriaTriggers.USED_ENDER_EYE.trigger(playerIn as ServerPlayerEntity, blockpos)
+        playerIn.activeHand = handIn
+        if (worldIn is ServerWorld) {
+            println("Fuck Tom")
+            val blockpos =  worldIn.chunkProvider.chunkGenerator.biomeProvider
+                .findBiomePosition(playerIn.position.x, playerIn.position.y, playerIn.position.z, 500, 1,
+                    { biome: Biome -> biome.registryName == LEY_BIOME.registryName }, worldIn.rand, true)
+            if (blockpos != null) {
+                val eyeofenderentity = EyeOfEnderEntity(worldIn, playerIn.posX, playerIn.getPosYHeight(0.5), playerIn.posZ)
+                eyeofenderentity.func_213863_b(itemstack)
+                eyeofenderentity.moveTowards(blockpos)
+                worldIn.addEntity(eyeofenderentity)
+                if (playerIn is ServerPlayerEntity) {
+                    CriteriaTriggers.USED_ENDER_EYE.trigger(playerIn, blockpos)
+                }
             }
         }
-        return super.onItemRightClick(worldIn, playerIn, handIn)
+        return ActionResult.resultSuccess(itemstack)
     }
 }
