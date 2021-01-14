@@ -21,41 +21,36 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 
 minecraft {
     // Change to your preferred mappings
-    mappings channel: 'snapshot', version: '20201028-1.16.3'
+    mappings channel: 'snapshot', version: '20200916-1.16.2'
     // Add your AccessTransformer
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     runs {
         client {
-            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
 
             property 'forge.logging.console.level', 'debug'
 
             mods {
                 lotl {
-                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
         }
 
         server {
-            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
 
             property 'forge.logging.console.level', 'debug'
 
             mods {
                 lotl {
-                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
         }
 
         data {
-            //noinspection GroovyAssignabilityCheck
             workingDirectory project.file('run')
 
             property 'forge.logging.console.level', 'debug'
@@ -64,7 +59,6 @@ minecraft {
 
             mods {
                 lotl {
-                    //noinspection GroovyAssignabilityCheck
                     source sourceSets.main
                 }
             }
@@ -81,7 +75,7 @@ repositories {
 
 dependencies {
     // Use the latest version of Minecraft Forge
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
+    minecraft 'net.minecraftforge:forge:1.16.3-34.1.22'
 
     // Use the latest version of KotlinForForge
     fg.deobf(implementation('thedarkcolour:kotlinforforge:1.7.0'))
