@@ -1,7 +1,5 @@
 package mod.lotl.common.entity
 
-import net.minecraft.entity.Entity
-import net.minecraft.entity.EntityType
 import net.minecraft.entity.projectile.EyeOfEnderEntity
 import net.minecraft.particles.ParticleTypes
 import net.minecraft.util.math.BlockPos
@@ -13,13 +11,12 @@ import kotlin.math.sin
 import kotlin.math.sqrt
 
 class LeyFinderEntity(worldIn: World, x: Double, y: Double, z: Double) : EyeOfEnderEntity(worldIn, x, y, z) {
-    var targetX = 0.0
-    var targetY = 0.0
-    var targetZ = 0.0
-    var despawnTimer : Int = 0
+    private var targetX = 0.0
+    private var targetY = 0.0
+    private var targetZ = 0.0
+    private var despawnTimer : Int = 0
 
-
-    fun rotationCalc(p_234614_0_: Float, p_234614_1_: Float): Float {
+     private fun rotationCalc(p_234614_0_: Float, p_234614_1_: Float): Float {
         var previousValue = p_234614_0_
         while (p_234614_1_ - previousValue < -180.0f) {
             previousValue -= 360.0f
@@ -29,7 +26,6 @@ class LeyFinderEntity(worldIn: World, x: Double, y: Double, z: Double) : EyeOfEn
         }
         return MathHelper.lerp(0.2f, previousValue, p_234614_1_)
     }
-
 
     override fun moveTowards(pos: BlockPos) {
         val d0 = pos.x.toDouble()
@@ -49,6 +45,7 @@ class LeyFinderEntity(worldIn: World, x: Double, y: Double, z: Double) : EyeOfEn
         }
         despawnTimer = 0
     }
+
     override fun tick() {
         var vector3d = motion
         val d0 = this.posX + vector3d.x
