@@ -16,7 +16,12 @@ class LeyFinderEntity(worldIn: World, x: Double, y: Double, z: Double) : EyeOfEn
     private var targetZ = 0.0
     private var despawnTimer : Int = 0
 
-     private fun rotationCalc(p_234614_0_: Float, p_234614_1_: Float): Float {
+    override fun setFlag(flag: Int, set: Boolean) {
+
+        super.setFlag(6, true)
+    }
+
+    private fun rotationCalc(p_234614_0_: Float, p_234614_1_: Float): Float {
         var previousValue = p_234614_0_
         while (p_234614_1_ - previousValue < -180.0f) {
             previousValue -= 360.0f

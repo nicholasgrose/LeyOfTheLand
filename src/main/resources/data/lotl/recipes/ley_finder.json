@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tools",
+  "pattern": [
+    "c",
+    "b",
+    "s"
+  ],
+  "key": {
+    "c":
+    {
+      "item": "lotl:crystal_ley"
+    },
+    "b":
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+   "item": "lotl:ley_finder"
+  }
+}
